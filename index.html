@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Cross Country Team</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <title>Home - Cross Country Team</title>
 </head>
 <body>
-    <a href="#main">Skip to Main Content</a>
+    <header>
+        <h1>Ann Arbor Skyline XC</h1>
+    </header>
+    
     <nav>
         <ul>
-            <li><a href="index.html">Home Page</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="mens_team.html">Men's Team</a></li>
             <li><a href="womens_team.html">Women's Team</a></li>
             <li><a href="meets.html">Meets</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>Welcome to the Cross Country Team Website</h1>
-        <img src="images/skyline_logo.jpg" alt="Skyline High School Logo" width="200">
-    </header>
-    <main id="main">
-        <section>
-            <h2>About Our Team</h2>
-            <p>Welcome to the Skyline High School Cross Country Team webpage. Here you will find information about our athletes, their performances, and upcoming meets.</p>
-        </section>
-        <section>
+    
+    <main>
+        <section id="team-info">
             <h2>Explore Our Teams</h2>
             <div class="team-links">
-                <a href="mens_team.html">
+                <a href="mens_team.html" class="team-link">
                     <img src="images/mens_team.jpg" alt="Men's Team">
                     <h3>Men's Team</h3>
                 </a>
-                <a href="womens_team.html">
+                <a href="womens_team.html" class="team-link">
                     <img src="images/womens_team.jpg" alt="Women's Team">
                     <h3>Women's Team</h3>
                 </a>
-                <a href="meets.html">
-                    <img src="images/meets.jpg" alt="Meets">
-                    <h3>Meets</h3>
-                </a>
             </div>
         </section>
+
+        <section id="athlete-links">
+            <h2>Athlete Pages</h2>
+            <ul>
+                <!-- Example list of athlete pages -->
+                <li><a href="mens_team/Alex_Nemecek18820260.html">Alex Nemecek</a></li>
+                <li><a href="mens_team/Amir_Abston25395576.html">Amir Abston</a></li>
+                <li><a href="womens_team/Adrienne_Stewart21142907.html">Adrienne Stewart</a></li>
+                <li><a href="womens_team/Alexandra_Wren21142908.html">Alexandra Wren</a></li>
+                <!-- Add more athlete links as needed -->
+            </ul>
+        </section>
     </main>
+    
     <footer>
-        <p>Skyline High School</p>
-        <address>
-            2552 North Maple Road<br>
-            Ann Arbor, MI 48103<br><br>
-        </address>
+        <p>Skyline High School<br>
+        2552 North Maple Road<br>
+        Ann Arbor, MI 48103<br><br>
         <a href="https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-        Follow us on Instagram <a href="https://www.instagram.com/a2skylinexc/"><i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
+        </p>
     </footer>
-    <script src="https://kit.fontawesome.com/YOUR_ID.js" crossorigin="anonymous"></script>
 </body>
 </html>
