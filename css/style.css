@@ -69,8 +69,22 @@ header {
 }
 
 header h1 {
+    font-size: 2rem; /* Mobile-first font size */
     margin: 0;
     padding: 10px 0;
+}
+
+/* Responsive font size for header h1 */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
 }
 
 header img {
@@ -227,6 +241,9 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+footer a {
+    color: white
 }
 
 /* Additional mobile-first styles */
