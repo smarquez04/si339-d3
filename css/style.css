@@ -53,6 +53,39 @@ nav ul li a:hover {
     color: #adb5bd;
 }
 
+/* Team list styles for grid layout */
+.team-list ul {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove list styling */
+    justify-content: center; /* Center the grid items */
+}
+
+.team-list li {
+    display: flex; /* Flexbox for each athlete */
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center; /* Center align */
+    text-align: center; /* Center text */
+}
+
+.team-list img {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space between image and name */
+    border: 3px solid #ddd; /* Border for images */
+}
+
+.team-list span {
+    font-size: 1rem; /* Font size for athlete names */
+    color: #333; /* Text color for athlete names */
+    font-weight: 600; /* Bold text for athlete names */
+}
+
+
 @media (min-width: 768px) {
     nav ul {
         flex-direction: row;
