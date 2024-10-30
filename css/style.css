@@ -1,277 +1,62 @@
-/* Import reset.css */
-@import url('reset.css');
-
-/* Base styles for mobile-first */
-body {
-    font-family: 'Arial, sans-serif';
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Image Alignment and Sizing */
+.team-icons img {
+    max-width: 50px; /* Adjust as needed */
+    max-height: 50px; /* Adjust as needed */
+    margin: 10px; /* Add space around images */
+    vertical-align: middle; /* Align images with text */
 }
 
-/* General link styles */
-a {
-    text-decoration: none;
-    color: #007bff;
+/* Spacing and Layout */
+.main-content {
+    padding: 20px; /* Adds space inside the content */
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation styles */
-nav {
-    background-color: #343a40;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    color: #adb5bd;
-}
-
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* Header styles */
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
-    color: white;
-}
-
-header h1 {
-    margin: 0;
-    padding: 10px 0;
-}
-
-header img {
-    border-radius: 50%;
-    border: 5px solid #ddd;
-}
-
-/* Main Content Styles */
-main {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.center-links {
-    text-align: center;
-}
-
-.center-links h2 {
-    margin-bottom: 30px;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-}
-
-.team-link {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.team-link img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #ddd;
-    display: block;
-    margin: 0 auto;
-}
-
-.team-link h3 {
-    margin-top: 10px;
-}
-
-.team-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-    .links {
-        flex-direction: row;
-        gap: 40px;
-    }
-}
-
-/* Team list styles */
-.team-list ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.team-list ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.team-list a {
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-list a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.team-list img {
-    border-radius: 50%;
-    border: 3px solid #ddd;
-    margin-bottom: 10px;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
+.section-header, .team-icons {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-th, td {
-    padding: 15px;
-    border-bottom: 1px solid #dee2e6;
-}
-
-th {
-    background-color: #f8f9fa;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-@media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tr {
-        margin-bottom: 15px;
-    }
-
-    td {
-        text-align: right;
-        padding: 10px 10px;
-        position: relative;
-    }
-
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
-}
-
-/* Footer styles */
+/* Footer Contrast and Accessibility */
 footer {
-    background-color: #343a40;
-    color: white;
+    background-color: #333; /* Darken the background color */
+    color: #f1f1f1; /* Lighten the text color */
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
-/* Additional mobile-first styles */
-.container {
-    padding: 0 15px;
+footer a {
+    color: #00bfff; /* Lighter blue for better contrast */
+    text-decoration: underline;
 }
 
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 700px;
-        margin: auto;
-    }
+footer a:hover, footer a:focus {
+    color: #ffcc00; /* Color change on hover for accessibility */
 }
 
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1000px;
-    }
+/* Visual Hierarchy for Welcome Message and Explore Teams Section */
+.welcome-message {
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold;
+    color: #ffffff; /* White text for better contrast */
+    text-align: center;
+    padding: 15px;
 }
 
-/* Animation for header image */
-header img {
-    transition: transform 0.3s ease-in-out;
+.explore-teams {
+    border: 1px solid #ccc; /* Optional border for distinction */
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-header img:hover {
-    transform: scale(1.1);
+/* Navbar Alignment */
+nav ul {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 15px; /* Space between navigation items */
+    padding: 10px;
+    list-style-type: none;
 }
 
-/* Animations for tables */
-table tr {
-    transition: background-color 0.3s ease;
-}
-
-table tr:hover {
-    background-color: #efefef;
-}
-
-/* Simple fade-in effect */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body, header, main, nav, footer {
-    animation: fadeIn 1.5s ease-in;
+nav ul li {
+    margin: 0 10px;
 }
