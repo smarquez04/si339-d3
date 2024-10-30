@@ -16,7 +16,7 @@ body {
 /* General link styles */
 a {
     text-decoration: none;
-    color: #4c80a1;
+    color: #32586F;
 }
 
 a:hover {
@@ -64,7 +64,7 @@ nav ul li a:hover {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #4c80a1;
+    background-color: #32586F;
     color: white;
 }
 
