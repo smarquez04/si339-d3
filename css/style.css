@@ -110,6 +110,9 @@ main {
     margin-bottom: 30px;
 }
 
+#team-info {
+    text-align: center;
+}
 .links {
     display: flex;
     flex-direction: column;
