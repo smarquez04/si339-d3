@@ -1,62 +1,164 @@
-/* Image Alignment and Sizing */
-.team-icons img {
-    max-width: 50px; /* Adjust as needed */
-    max-height: 50px; /* Adjust as needed */
-    margin: 10px; /* Add space around images */
-    vertical-align: middle; /* Align images with text */
+/* Base Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #00bfff;
+    --accent-color: #ffcc00;
+    --background-color: #f1f1f1;
+    --text-color: #333;
+    --white-color: #ffffff;
 }
 
-/* Spacing and Layout */
-.main-content {
-    padding: 20px; /* Adds space inside the content */
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.section-header, .team-icons {
-    margin-top: 20px;
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* Footer Contrast and Accessibility */
+/* Container and layout styling */
+header, nav, main, footer {
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    list-style-type: none;
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.team-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.team-link {
+    text-align: center;
+    flex: 1;
+}
+
+.team-link img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Athlete Links */
+#athlete-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#athlete-links li {
+    margin-bottom: 10px;
+}
+
+#athlete-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+#athlete-links li a:hover, #athlete-links li a:focus {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* Footer */
 footer {
-    background-color: #333; /* Darken the background color */
-    color: #f1f1f1; /* Lighten the text color */
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 20px;
     text-align: center;
 }
 
 footer a {
-    color: #00bfff; /* Lighter blue for better contrast */
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
 footer a:hover, footer a:focus {
-    color: #ffcc00; /* Color change on hover for accessibility */
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
-/* Visual Hierarchy for Welcome Message and Explore Teams Section */
-.welcome-message {
-    font-size: 1.5em; /* Increase font size */
-    font-weight: bold;
-    color: #ffffff; /* White text for better contrast */
-    text-align: center;
-    padding: 15px;
+/* Utility Classes and Miscellaneous */
+button, .button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.explore-teams {
-    border: 1px solid #ccc; /* Optional border for distinction */
-    padding: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+button:hover, .button:hover, button:focus, .button:focus {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: scale(1.05);
 }
 
-/* Navbar Alignment */
-nav ul {
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-    gap: 15px; /* Space between navigation items */
-    padding: 10px;
-    list-style-type: none;
-}
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-nav ul li {
-    margin: 0 10px;
+    .team-links {
+        flex-direction: column;
+    }
+
+    .team-link {
+        margin-bottom: 20px;
+    }
 }
