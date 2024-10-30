@@ -162,3 +162,31 @@ button:hover, .button:hover, button:focus, .button:focus {
         margin-bottom: 20px;
     }
 }
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #333333;
+        --text-color: #ffffff;
+        --primary-color: #1e90ff;
+        --secondary-color: #a9a9a9;
+    }
+}
+
+/* Custom Section Transitions */
+section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section:hover, section:focus {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
