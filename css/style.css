@@ -113,6 +113,19 @@ main {
 #team-info {
     text-align: center;
 }
+
+/* Styles for the Explore Our Teams heading */
+#team-info h2 {
+    font-size: 2rem; /* Change this value to increase/decrease size */
+    margin-bottom: 30px; /* Adjust spacing if necessary */
+}
+
+/* Styles for team headers */
+.team-link h3 {
+    font-size: 1.5rem; /* Change this value to increase/decrease size */
+    margin-top: 10px; /* Ensure some space between the image and text */
+}
+
 .links {
     display: flex;
     flex-direction: column;
