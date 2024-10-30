@@ -1,46 +1,131 @@
-/* Base Variables */
-:root {
-    --primary-color: #333;
-    --secondary-color: #00bfff;
-    --accent-color: #ffcc00;
-    --background-color: #f1f1f1;
-    --text-color: #333;
-    --white-color: #ffffff;
-}
+/* reset.css */
+@import url('reset.css');
 
-/* General Resets */
-* {
+/* Base styles for mobile-first */
+body {
+    font-family: 'Arial, sans-serif';
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f8f9fa;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    background-color: var(--white-color);
-    line-height: 1.6;
+/* General link styles */
+a {
+    text-decoration: none;
+    color: #007bff;
 }
 
-/* Mobile First Styles */
-header, nav, main, footer {
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #343a40;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #adb5bd;
+}
+
+/* Header styles */
+header {
+    text-align: center;
     padding: 20px;
-    margin: 0;
+    background-color: #007bff;
+    color: white;
 }
 
-/* Responsive Table Design */
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+header img {
+    border-radius: 50%;
+    border: 5px solid #ddd;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Index Page Styles */
+.team-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-links a {
+    display: block;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.team-links img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .team-links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-links a {
+        max-width: 30%;
+    }
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
     padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dee2e6;
 }
 
-@media (max-width: 768px) {
+th {
+    background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -62,56 +147,45 @@ th, td {
     td:before {
         content: attr(data-label);
         position: absolute;
-        left: 15px;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
         font-weight: bold;
         text-align: left;
     }
 }
 
-/* Accessibility Features */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #333333;
-        --text-color: #ffffff;
-        --primary-color: #1e90ff;
-        --secondary-color: #a9a9a9;
-    }
-}
-
-/* Additional Styles and Transitions */
-.header, .footer {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: white;
     text-align: center;
+    padding: 20px 0;
 }
 
-.section {
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Additional mobile-first styles */
+.container {
+    padding: 0 15px;
 }
 
-.section:hover, .section:focus {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+/* Media Queries for Larger Screens */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
-button {
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover, button:focus {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
+/* Desktops */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
 }
