@@ -20,150 +20,55 @@ body {
     color: var(--text-color);
     background-color: var(--white-color);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
-/* Container and layout styling */
+/* Mobile First Styles */
 header, nav, main, footer {
     padding: 20px;
     margin: 0;
 }
 
-/* Header Styling */
-header {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 20px 0;
+/* Responsive Table Design */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-header h1 {
-    margin: 0;
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Navigation Menu */
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
-    list-style-type: none;
-    background: var(--primary-color);
-    color: var(--white-color);
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: var(--white-color);
-    text-decoration: none;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    text-decoration: underline;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-}
-
-.team-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.team-link {
-    text-align: center;
-    flex: 1;
-}
-
-.team-link img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Athlete Links */
-#athlete-links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#athlete-links li {
-    margin-bottom: 10px;
-}
-
-#athlete-links li a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--primary-color);
-}
-
-#athlete-links li a:hover, #athlete-links li a:focus {
-    color: var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-footer a:hover, footer a:focus {
-    color: var(--accent-color);
-    background-color: rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-}
-
-/* Utility Classes and Miscellaneous */
-button, .button {
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover, .button:hover, button:focus, .button:focus {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
     }
 
-    .team-links {
-        flex-direction: column;
+    thead {
+        display: none;
     }
 
-    .team-link {
-        margin-bottom: 20px;
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding: 10px 10px;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-align: left;
     }
 }
 
-/* Reduced Motion */
+/* Accessibility Features */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
@@ -171,7 +76,6 @@ button:hover, .button:hover, button:focus, .button:focus {
     }
 }
 
-/* Dark Mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #333333;
@@ -181,12 +85,33 @@ button:hover, .button:hover, button:focus, .button:focus {
     }
 }
 
-/* Custom Section Transitions */
-section {
+/* Additional Styles and Transitions */
+.header, .footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.section {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-section:hover, section:focus {
+.section:hover, .section:focus {
     background-color: var(--secondary-color);
-    color: #ffffff;
+    color: var(--white-color);
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, button:focus {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
 }
