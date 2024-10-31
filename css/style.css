@@ -53,39 +53,7 @@ nav ul li a:hover {
     color: #adb5bd;
 }
 
-/* Team list styles for grid layout */
-.team-list ul {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between grid items */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove list styling */
-    justify-content: center; /* Center the grid items */
-}
-
-.team-list li {
-    display: flex; /* Flexbox for each athlete */
-    flex-direction: column; /* Stack image and name vertically */
-    align-items: center; /* Center align */
-    text-align: center; /* Center text */
-}
-
-.team-list img {
-    width: 100px; /* Fixed width for images */
-    height: 100px; /* Fixed height for images */
-    border-radius: 50%; /* Circular images */
-    margin-bottom: 10px; /* Space between image and name */
-    border: 3px solid #ddd; /* Border for images */
-}
-
-.team-list span {
-    font-size: 1rem; /* Font size for athlete names */
-    color: #333; /* Text color for athlete names */
-    font-weight: 600; /* Bold text for athlete names */
-}
-
-
+/* Responsive Media Queries */
 @media (min-width: 768px) {
     nav ul {
         flex-direction: row;
@@ -107,22 +75,14 @@ header h1 {
     padding: 10px 0;
 }
 
-/* Responsive font size for header h1 */
-@media (min-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    header h1 {
-        font-size: 3rem;
-    }
-}
-
 header img {
     border-radius: 50%;
     border: 5px solid #ddd;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Main Content Styles */
@@ -153,85 +113,64 @@ main {
     margin-bottom: 30px; /* Adjust spacing if necessary */
 }
 
-/* Styles for team headers */
-.team-link h3 {
-    font-size: 1.5rem; /* Change this value to increase/decrease size */
-    margin-top: 10px; /* Ensure some space between the image and text */
+/* Styles for team page */
+.team-list {
+    padding: 20px 15px; /* Add padding to the team list section */
 }
 
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-}
-
-.team-link {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.team-link img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #ddd;
-    display: block;
-    margin: 0 auto;
-}
-
-.team-link h3 {
-    margin-top: 10px;
-}
-
-.team-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-    .links {
-        flex-direction: row;
-        gap: 40px;
-    }
-}
-
-/* Team list styles */
 .team-list ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove list styling */
+    justify-content: center; /* Center the grid items */
 }
 
-.team-list ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.team-list li {
+    display: flex; /* Flexbox for each athlete */
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center; /* Center align */
+    text-align: center; /* Center text */
+    background-color: #fff; /* White background for each card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
 }
 
-.team-list a {
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-list a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.team-list li:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .team-list img {
-    border-radius: 50%;
-    border: 3px solid #ddd;
-    margin-bottom: 10px;
+    width: 100%; /* Responsive width for images */
+    max-width: 100px;
+    height: auto; /* Responsive height */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space between image and name */
+    border: 3px solid #ddd; /* Border for images */
+}
+
+.team-list span {
+    font-size: 1rem; /* Font size for athlete names */
+    color: #333; /* Text color for athlete names */
+    font-weight: 600; /* Bold text for athlete names */
+}
+
+@media (min-width: 768px) {
+    .team-list ul {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust column size for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-list ul {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for large screens */
+    }
 }
 
 /* Table Styles */
@@ -291,8 +230,9 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
 footer a {
-    color: white
+    color: white;
 }
 
 /* Additional mobile-first styles */
@@ -328,48 +268,6 @@ footer a {
     color: #f3f6f8; /* Adjust color as preferred */
     margin-top: 20px; /* Space above the heading */
     margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Animation for header image */
-header img {
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Animations for tables */
-table tr {
-    transition: background-color 0.3s ease;
-}
-
-table tr:hover {
-    background-color: #efefef;
-}
-
-/* Simple fade-in effect */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body, header, main, nav, footer {
-    animation: fadeIn 1.5s ease-in;
-}
-
-/* Animation for header image */
-header img {
-    transition: transform 0.3s ease-in-out;
-}
-
-header img:hover {
-    transform: scale(1.1);
-}
-
-/* Animations for tables */
-table tr {
-    transition: background-color 0.3s ease;
-}
-
-table tr:hover {
-    background-color: #efefef;
 }
 
 /* Simple fade-in effect */
