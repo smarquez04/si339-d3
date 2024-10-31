@@ -320,6 +320,40 @@ footer a {
     }
 }
 
+/* Heading style for "Our Athletes" */
+.athletes-heading {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #f3f6f8; /* Adjust color as preferred */
+    margin-top: 20px; /* Space above the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Animation for header image */
+header img {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animations for tables */
+table tr {
+    transition: background-color 0.3s ease;
+}
+
+table tr:hover {
+    background-color: #efefef;
+}
+
+/* Simple fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body, header, main, nav, footer {
+    animation: fadeIn 1.5s ease-in;
+}
+
 /* Animation for header image */
 header img {
     transition: transform 0.3s ease-in-out;
