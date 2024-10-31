@@ -1,242 +1,281 @@
-/* Import reset.css */
-@import url('reset.css');
+ /* Import reset.css */
+ @import url('reset.css');
 
-/* Base styles for mobile-first */
-body {
-    font-family: 'Arial, sans-serif';
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* General link styles */
-a {
-    text-decoration: none;
-    color: #32586F;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation styles */
-nav {
-    background-color: #343a40;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    color: #adb5bd;
-}
-
-/* Responsive Media Queries */
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* Header styles */
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #32586F;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 2rem; /* Mobile-first font size */
-    margin: 0;
-    padding: 10px 0;
-}
-
-header img {
-    border-radius: 50%;
-    border: 5px solid #ddd;
-    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
-}
-
-header img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-/* Main Content Styles */
-main {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-main h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 20px 0;
-    color: #343a40;
-}
-
-section {
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-/* Athlete's Seasonal Records and Race Results Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-th, td {
-    padding: 15px;
-    border-bottom: 1px solid #dee2e6;
-    text-align: center;
-}
-
-th {
-    background-color: #f8f9fa;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #efefef;
-}
-
-/* Table responsiveness */
-@media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tr {
-        margin-bottom: 15px;
-    }
-
-    td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        width: 50%;
-        padding-right: 10px;
-        font-weight: bold;
-        text-align: left;
-    }
-}
-
-/* Gallery */
-#gallery {
-    text-align: center;
-}
-
-#gallery img {
-    max-width: 200px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-#gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer styles */
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: white;
-}
-
-/* Additional mobile-first styles */
-.container {
-    padding: 0 15px;
-}
-
-.team-welcome {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #f9fafb; 
-}
-
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 700px;
-        margin: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1000px;
-    }
-}
-
-/* Heading style for "Our Athletes" */
-.athletes-heading {
-    text-align: center;
-    font-size: 3rem; 
-    font-weight: bold;
-    color: #f3f6f8; 
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
-
-/* Simple fade-in effect */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body, header, main, nav, footer {
-    animation: fadeIn 1.5s ease-in;
-}
+ /* Base styles for mobile-first */
+ body {
+     font-family: 'Arial, sans-serif';
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     background-color: #f8f9fa;
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+ }
+ 
+ /* General link styles */
+ a {
+     text-decoration: none;
+     color: #32586F;
+ }
+ 
+ a:hover {
+     text-decoration: underline;
+ }
+ 
+ /* Navigation styles */
+ nav {
+     background-color: #343a40;
+     padding: 10px;
+     text-align: center;
+ }
+ 
+ nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 15px;
+ }
+ 
+ nav ul li {
+     list-style: none;
+ }
+ 
+ nav ul li a {
+     color: white;
+     font-size: 1.2rem;
+ }
+ 
+ nav ul li a:hover {
+     color: #adb5bd;
+ }
+ 
+ /* Responsive Media Queries */
+ @media (min-width: 768px) {
+     nav ul {
+         flex-direction: row;
+         justify-content: center;
+     }
+ }
+ 
+ /* Header styles */
+ header {
+     text-align: center;
+     padding: 20px;
+     background-color: #32586F;
+     color: white;
+ }
+ 
+ header h1 {
+     font-size: 2rem; /* Mobile-first font size */
+     margin: 0;
+     padding: 10px 0;
+ }
+ 
+ header img {
+     border-radius: 50%;
+     border: 5px solid #ddd;
+     transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+ }
+ 
+ header img:hover {
+     transform: scale(1.1); /* Slightly enlarge on hover */
+ }
+ 
+ /* Main Content Styles */
+ main {
+     flex: 1;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .center-links {
+     text-align: center;
+ }
+ 
+ .center-links h2 {
+     margin-bottom: 30px;
+ }
+ 
+ #team-info {
+     text-align: center;
+ }
+ 
+ /* Styles for the Explore Our Teams heading */
+ #team-info h2 {
+     font-size: 2rem; /* Change this value to increase/decrease size */
+     margin-bottom: 30px; /* Adjust spacing if necessary */
+ }
+ 
+ /* Styles for team page */
+ .team-list {
+     padding: 20px 15px; /* Add padding to the team list section */
+ }
+ 
+ .team-list ul {
+     display: grid; /* Use grid layout */
+     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Responsive columns */
+     gap: 20px; /* Space between grid items */
+     padding: 0; /* Remove default padding */
+     margin: 0; /* Remove default margin */
+     list-style: none; /* Remove list styling */
+     justify-content: center; /* Center the grid items */
+ }
+ 
+ .team-list li {
+     display: flex; /* Flexbox for each athlete */
+     flex-direction: column; /* Stack image and name vertically */
+     align-items: center; /* Center align */
+     text-align: center; /* Center text */
+     background-color: #fff; /* White background for each card */
+     border: 1px solid #ddd; /* Light border */
+     border-radius: 8px; /* Rounded corners */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     padding: 20px; /* Padding inside the cards */
+     transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
+ }
+ 
+ .team-list li:hover {
+     transform: scale(1.05); /* Slightly enlarge on hover */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+ }
+ 
+ .team-list img {
+     width: 100%; /* Responsive width for images */
+     max-width: 100px;
+     height: auto; /* Responsive height */
+     border-radius: 50%; /* Circular images */
+     margin-bottom: 10px; /* Space between image and name */
+     border: 3px solid #ddd; /* Border for images */
+ }
+ 
+ .team-list span {
+     font-size: 1rem; /* Font size for athlete names */
+     color: #333; /* Text color for athlete names */
+     font-weight: 600; /* Bold text for athlete names */
+ }
+ 
+ @media (min-width: 768px) {
+     .team-list ul {
+         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust column size for medium screens */
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .team-list ul {
+         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for large screens */
+     }
+ }
+ 
+ /* Table Styles */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+ }
+ 
+ th, td {
+     padding: 15px;
+     border-bottom: 1px solid #dee2e6;
+ }
+ 
+ th {
+     background-color: #f8f9fa;
+ }
+ 
+ tr:nth-child(even) {
+     background-color: #f2f2f2;
+ }
+ 
+ @media (max-width: 600px) {
+     table, thead, tbody, th, td, tr {
+         display: block;
+     }
+ 
+     thead {
+         display: none;
+     }
+ 
+     tr {
+         margin-bottom: 15px;
+     }
+ 
+     td {
+         text-align: right;
+         padding: 10px 10px;
+         position: relative;
+     }
+ 
+     td:before {
+         content: attr(data-label);
+         position: absolute;
+         left: 0;
+         width: 50%;
+         padding-left: 15px;
+         font-weight: bold;
+         text-align: left;
+     }
+ }
+ 
+ /* Footer styles */
+ footer {
+     background-color: #343a40;
+     color: white;
+     text-align: center;
+     padding: 20px 0;
+ }
+ 
+ footer a {
+     color: white;
+ }
+ 
+ /* Additional mobile-first styles */
+ .container {
+     padding: 0 15px;
+ }
+ 
+ .team-welcome {
+     font-size: 2.5rem;
+     text-align: center;
+     color: #f9fafb; 
+ }
+ 
+ /* Media Queries for Larger Screens */
+ @media (min-width: 768px) {
+     .container {
+         max-width: 700px;
+         margin: auto;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .container {
+         max-width: 1000px;
+     }
+ }
+ 
+ /* Heading style for "Our Athletes" */
+ .athletes-heading {
+     text-align: center;
+     font-size: 3rem; 
+     font-weight: bold;
+     color: #f3f6f8; 
+     margin-top: 20px; 
+     margin-bottom: 20px; 
+ }
+ 
+ /* Simple fade-in effect */
+ @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
+ }
+ 
+ body, header, main, nav, footer {
+     animation: fadeIn 1.5s ease-in;
+ }
