@@ -53,14 +53,6 @@ nav ul li a:hover {
     color: #adb5bd;
 }
 
-/* Responsive Media Queries */
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
 /* Header styles */
 header {
     text-align: center;
@@ -70,7 +62,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem; /* Mobile-first font size */
+    font-size: 2rem;
     margin: 0;
     padding: 10px 0;
 }
@@ -78,11 +70,11 @@ header h1 {
 header img {
     border-radius: 50%;
     border: 5px solid #ddd;
-    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+    transition: transform 0.3s ease-in-out;
 }
 
 header img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
 }
 
 /* Main Content Styles */
@@ -107,71 +99,57 @@ main {
     text-align: center;
 }
 
-/* Styles for the Explore Our Teams heading */
 #team-info h2 {
-    font-size: 2rem; /* Change this value to increase/decrease size */
-    margin-bottom: 30px; /* Adjust spacing if necessary */
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 /* Styles for team page */
 .team-list {
-    padding: 20px 15px; /* Add padding to the team list section */
+    padding: 20px 15px;
 }
 
 .team-list ul {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between grid items */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove list styling */
-    justify-content: center; /* Center the grid items */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
 }
 
 .team-list li {
-    display: flex; /* Flexbox for each athlete */
-    flex-direction: column; /* Stack image and name vertically */
-    align-items: center; /* Center align */
-    text-align: center; /* Center text */
-    background-color: #32586F; /* blue background for each card */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Padding inside the cards */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #32586F;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .team-list li:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-list img {
-    width: 100%; /* Responsive width for images */
+    width: 100%;
     max-width: 100px;
-    max-width: 100px; /* Maximum width for images */
-    height: auto; /* Responsive height */
-    border-radius: 50%; /* Circular images */
-    margin-bottom: 10px; /* Space between image and name */
-    border: 3px solid #ddd; /* Border for images */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #ddd;
 }
 
 .team-list span {
-    font-size: 1rem; /* Font size for athlete names */
-    color: #333; /* Text color for athlete names */
-    font-weight: 600; /* Bold text for athlete names */
-}
-
-@media (min-width: 768px) {
-    .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust column size for medium screens */
-    }
-}
-
-@media (min-width: 1024px) {
-    .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for large screens */
-    }
+    font-size: 1rem;
+    color: #f9f7f7;
+    font-weight: 600;
 }
 
 /* Table Styles */
@@ -192,6 +170,176 @@ th {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+}
+
+/* Additional mobile-first styles */
+.container {
+    padding: 0 15px;
+}
+
+.team-welcome {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #f9fafb;
+}
+
+/* Heading style for "Our Athletes" */
+.athletes-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f3f6f8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Simple fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body, header, main, nav, footer {
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Athlete Profile Section */
+#athlete-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Athlete Name Styling */
+#athlete-profile h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Athlete Profile Picture Styling */
+#athlete-profile img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#athlete-profile img:hover {
+    transform: scale(1.05);
+}
+
+/* Season Records Section Styling */
+#athlete-sr-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#athlete-sr-table h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Athlete Result Table Styling */
+#athlete-result-table {
+    margin-top: 20px;
+}
+
+#athlete-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#athlete-table thead {
+    background-color: #7cbee7;
+    color: #15244a;
+}
+
+#athlete-table th, #athlete-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#athlete-table th {
+    font-weight: bold;
+}
+
+#athlete-table tr:hover {
+    background-color: #b6b6b6;
+}
+
+.result-row {
+    transition: background-color 0.3s;
+}
+
+#athlete-table td a {
+    font-size: 14px;
+    color: #15244a;
+    text-decoration: none;
+}
+
+#athlete-table td a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .team-list ul {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-list ul {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .container {
+        max-width: 1000px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -222,158 +370,4 @@ tr:nth-child(even) {
         font-weight: bold;
         text-align: left;
     }
-}
-
-/* Footer styles */
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: white;
-}
-
-/* Additional mobile-first styles */
-.container {
-    padding: 0 15px;
-}
-
-.team-welcome {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #f9fafb; 
-}
-
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 700px;
-        margin: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1000px;
-    }
-}
-
-/* Heading style for "Our Athletes" */
-.athletes-heading {
-    text-align: center;
-    font-size: 2.5rem; 
-    font-weight: bold;
-    color: #f3f6f8; 
-    margin-top: 20px; /* Space above the heading */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Simple fade-in effect */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body, header, main, nav, footer {
-    animation: fadeIn 1.5s ease-in;
-}
-/* Athlete Profile Section */
-#athlete-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align both name and image */
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-/* Athlete Name Styling */
-#athlete-profile h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: bold;
-}
-/* Athlete Profile Picture Styling */
-#athlete-profile img {
-    width: 100%;
-    max-width: 160px; /* Limit maximum width */
-    height: auto;
-    border-radius: 50%; /* Circular profile picture */
-    border: 3px solid #ddd; /* Border around the image */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-#athlete-profile img:hover {
-    transform: scale(1.05); /* Enlarge slightly on hover */
-}
-/* Season Records Section Styling */
-#athlete-sr-table {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    text-align: center;
-    margin: 20px 0; /* Adds space above and below */
-    padding: 20px;
-    background-color: #f8f9fa; /* Optional: background color for distinction */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-}
-
-/* Season Records Heading */
-#athlete-sr-table h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Athlete Result Table Styling */
-#athlete-result-table {
-    margin-top: 20px; /* Space above the table */
-}
-
-#athlete-table {
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Merge borders */
-    margin: 0 auto; /* Center the table */
-    background-color: #fff; /* White background for the table */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 8px; /* Rounded corners */
-}
-
-#athlete-table thead {
-    background-color: #7cbee7;
-    color: #15244a;
-}
-
-#athlete-table th, #athlete-table td {
-    padding: 8px; /* Padding for cells */
-    text-align: left; /* Left align text */
-    border-bottom: 1px solid #ddd; /* Light gray border below cells */
-}
-
-#athlete-table th {
-    font-weight: bold; /* Bold text for headers */
-}
-
-#athlete-table tr:hover {
-    background-color:#b6b6b6 ; /* Light gray background on hover */
-
-}
-
-.result-row {
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-#athlete-table td a {
-    font-size: 14px;
-    color: #15244a;
-    text-decoration: none; /* Remove underline from links */
-}
-
-#athlete-table td a:hover {
-    text-decoration: underline; /* Underline on hover */
 }
