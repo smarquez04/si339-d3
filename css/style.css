@@ -215,23 +215,6 @@ body, header, main, nav, footer {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Athlete Profile Section */
-#athlete-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Athlete Name Styling */
-#athlete-profile h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: bold;
-}
 
 /* Athlete Profile Picture Styling */
 #athlete-profile img {
@@ -283,8 +266,8 @@ body, header, main, nav, footer {
 }
 
 #athlete-table thead {
-    background-color: #7cbee7;
-    color: #15244a;
+    background-color: #32586F;
+    color: #f7f7fa;
 }
 
 #athlete-table th, #athlete-table td {
