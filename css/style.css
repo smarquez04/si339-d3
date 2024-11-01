@@ -109,9 +109,8 @@ main {
 
 /* Styles for the Explore Our Teams heading */
 #team-info h2 {
-    font-size: 2rem; /* Change this value to increase/decrease size */
-    margin-bottom: 30px; /* Adjust spacing if necessary */
-}
+    font-size: 2rem; 
+    margin-bottom: 30px; 
 
 /* Styles for team page */
 .team-list {
@@ -133,7 +132,8 @@ main {
     flex-direction: column; /* Stack image and name vertically */
     align-items: center; /* Center align */
     text-align: center; /* Center text */
-    background-color: #fff; /* White background for each card */
+    background-color: #32586F; /* White background for each card */
+    color: #f8f9fa;
     border: 1px solid #ddd; /* Light border */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -289,16 +289,16 @@ body, header, main, nav, footer {
     margin-bottom: 10px;
 }
 /* Athlete Records Table Styles */
-.athlete-records-table {
+.athlete-result-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-.athlete-records-table th, .athlete-records-table td {
+.athlete-table th, .athlete-table td {
     padding: 10px;
     border: 1px solid #ddd; /* Cell border */
     text-align: center; /* Center table text */
 }
-.athlete-records-table th {
+.athlete-table th {
     background-color: #f2f2f2; /* Header background color */
 }
