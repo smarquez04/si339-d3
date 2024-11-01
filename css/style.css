@@ -149,6 +149,7 @@ main {
 .team-list img {
     width: 100%; /* Responsive width for images */
     max-width: 100px;
+    max-width: 100px; /* Maximum width for images */
     height: auto; /* Responsive height */
     border-radius: 50%; /* Circular images */
     margin-bottom: 10px; /* Space between image and name */
@@ -279,3 +280,30 @@ footer a {
 body, header, main, nav, footer {
     animation: fadeIn 1.5s ease-in;
 }
+/* Athlete Records Styles */
+#athlete-sr-table {
+    text-align: center; /* Center yearly records */
+    margin: 20px 0; /* Spacing around section */
+}
+#athlete-sr-table h2 {
+    margin-bottom: 10px;
+}
+/* Athlete Records Table Styles */
+.athlete-records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.athlete-records-table th, .athlete-records-table td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Cell border */
+    text-align: center; /* Center table text */
+}
+.athlete-records-table th {
+    background-color: #f2f2f2; /* Header background color */
+}
+0 commit comments
+Comments
+0
+ (0)
+Comment
