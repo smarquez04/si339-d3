@@ -1,1 +1,2 @@
 # si339-d3
+This project consists of a mobile-first responsive website for the Skyline High School Cross Country Team, featuring separate pages for the Men's and Women's teams. The design prioritizes accessibility and a clean user experience while showcasing each athlete's profile.
