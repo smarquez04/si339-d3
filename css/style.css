@@ -239,13 +239,13 @@ body, header, main, nav, footer {
     text-align: center;
     margin: 20px 0;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #32586F;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #athlete-sr-table h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
     color: #333;
     font-weight: bold;
@@ -260,7 +260,7 @@ body, header, main, nav, footer {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #32586F;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
