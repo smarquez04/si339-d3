@@ -239,7 +239,7 @@ body, header, main, nav, footer {
     text-align: center;
     margin: 20px 0;
     padding: 20px;
-    background-color: #32586F;
+    background-color: #d4ecfb;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -247,7 +247,7 @@ body, header, main, nav, footer {
 #athlete-sr-table h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: #333;
+    color: #060505;
     font-weight: bold;
 }
 
@@ -260,14 +260,14 @@ body, header, main, nav, footer {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #32586F;
+    background-color: #f7f8f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
 #athlete-table thead {
-    background-color: #32586F;
-    color: #f7f7fa;
+    background-color: #d4ecfb;
+    color: #000001;
 }
 
 #athlete-table th, #athlete-table td {
