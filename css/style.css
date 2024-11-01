@@ -1,4 +1,4 @@
-/* Import reset.css */
+/* Existing Reset Import */
 @import url('reset.css');
 
 /* Base styles for mobile-first */
@@ -75,14 +75,18 @@ header h1 {
     padding: 10px 0;
 }
 
+/* Athlete Profile Picture */
 header img {
-    border-radius: 50%;
-    border: 5px solid #ddd;
-    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+    border-radius: 50%; /* Circular image style */
+    border: 3px solid #ddd; /* Match border style */
+    max-width: 100px; /* Similar to team page image size */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 header img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
 }
 
 /* Main Content Styles */
@@ -95,85 +99,14 @@ main {
     justify-content: center;
 }
 
-.center-links {
+#athlete-sr-table, #athlete-result-table {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
     text-align: center;
 }
 
-.center-links h2 {
-    margin-bottom: 30px;
-}
-
-#team-info {
-    text-align: center;
-}
-
-/* Styles for the Explore Our Teams heading */
-#team-info h2 {
-    font-size: 2rem; /* Change this value to increase/decrease size */
-    margin-bottom: 30px; /* Adjust spacing if necessary */
-}
-
-/* Styles for team page */
-.team-list {
-    padding: 20px 15px; /* Add padding to the team list section */
-}
-
-.team-list ul {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between grid items */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove list styling */
-    justify-content: center; /* Center the grid items */
-}
-
-.team-list li {
-    display: flex; /* Flexbox for each athlete */
-    flex-direction: column; /* Stack image and name vertically */
-    align-items: center; /* Center align */
-    text-align: center; /* Center text */
-    background-color: #fff; /* White background for each card */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Padding inside the cards */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
-}
-
-.team-list li:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-.team-list img {
-    width: 100%; /* Responsive width for images */
-    max-width: 100px; /* Maximum width for images */
-    height: auto; /* Responsive height */
-    border-radius: 50%; /* Circular images */
-    margin-bottom: 10px; /* Space between image and name */
-    border: 3px solid #ddd; /* Border for images */
-}
-
-.team-list span {
-    font-size: 1rem; /* Font size for athlete names */
-    color: #333; /* Text color for athlete names */
-    font-weight: 600; /* Bold text for athlete names */
-}
-
-@media (min-width: 768px) {
-    .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust column size for medium screens */
-    }
-}
-
-@media (min-width: 1024px) {
-    .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for large screens */
-    }
-}
-
-/* Table Styles */
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -193,6 +126,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* Responsive Table for Mobile */
 @media (max-width: 600px) {
     table, thead, tbody, th, td, tr {
         display: block;
@@ -246,31 +180,24 @@ footer a {
     color: #f9fafb; 
 }
 
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 700px;
-        margin: auto;
-    }
+/* Athlete's Seasonal Records Section */
+#athlete-sr-table {
+    margin-top: 20px;
 }
 
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1000px;
-    }
+#athlete-sr-table h2 {
+    font-size: 1.8rem;
+    color: #32586F;
 }
 
-/* Heading style for "Our Athletes" */
-.athletes-heading {
-    text-align: center;
-    font-size: 2.5rem; 
-    font-weight: bold;
-    color: #f3f6f8; 
-    margin-top: 20px; /* Space above the heading */
-    margin-bottom: 20px; /* Space below the heading */
+/* Race Results Section */
+#athlete-result-table h2 {
+    font-size: 1.8rem;
+    color: #32586F;
+    margin-top: 30px;
 }
 
-/* Simple fade-in effect */
+/* General Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -280,29 +207,3 @@ body, header, main, nav, footer {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Athlete Records Styles */
-#athlete-sr-table {
-    text-align: center; /* Center yearly records */
-    margin: 20px 0; /* Spacing around section */
-}
-
-#athlete-sr-table h2 {
-    margin-bottom: 10px;
-}
-
-/* Athlete Records Table Styles */
-.athlete-records-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.athlete-records-table th, .athlete-records-table td {
-    padding: 10px;
-    border: 1px solid #ddd; /* Cell border */
-    text-align: center; /* Center table text */
-}
-
-.athlete-records-table th {
-    background-color: #f2f2f2; /* Header background color */
-}
