@@ -231,6 +231,35 @@ body, header, main, nav, footer {
     transform: scale(1.05);
 }
 
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Color Scheme Preference */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1c1c1e;
+        color: #f8f9fa;
+    }
+    nav, footer {
+        background-color: #343a40;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f8f9fa;
+        color: #060505;
+    }
+    nav, footer {
+        background-color: #32586F;
+    }
+}
+
 /* Season Records Section Styling */
 #athlete-sr-table {
     display: flex;
@@ -299,6 +328,8 @@ body, header, main, nav, footer {
 }
 
 /* Media Queries */
+
+/* Adjust navigation and grid layout for tablet and larger screens */
 @media (min-width: 768px) {
     nav ul {
         flex-direction: row;
@@ -315,6 +346,7 @@ body, header, main, nav, footer {
     }
 }
 
+/* Desktop adjustments */
 @media (min-width: 1024px) {
     .team-list ul {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -325,32 +357,24 @@ body, header, main, nav, footer {
     }
 }
 
-@media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
+/* Table adjustments for larger screens */
+@media (min-width: 600px) {
+    table {
+        display: table;
     }
-
     thead {
-        display: none;
+        display: table-header-group;
     }
-
     tr {
-        margin-bottom: 15px;
+        display: table-row;
     }
-
-    td {
-        text-align: right;
-        padding: 10px 10px;
-        position: relative;
-    }
-
-    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
+    td, th {
+        display: table-cell;
+        padding: 15px;
         text-align: left;
+        position: static;
+    }
+    td:before {
+        content: none;
     }
 }
