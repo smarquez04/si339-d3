@@ -275,7 +275,10 @@ body, header, main, nav, footer {
         color: #f8f9fa; /* Light text for visibility */
     }
 
-
+    table, th, td {
+        color: black; /* Change table text color to black */
+    }
+    
     table th {
         background-color: #d4ecfb; /* Optional - contrasting background for table headers */
     }
