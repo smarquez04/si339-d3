@@ -271,7 +271,7 @@ body, header, main, nav, footer {
     }
     /* Dark Mode - Skip to Main Content button */
     a.skip-to-content {
-        background-color: #acdcf9;
+        background-color: #1c1c1e;
         color: #f8f9fa; /* Light text for visibility */
     }
 
@@ -375,7 +375,7 @@ body, header, main, nav, footer {
     }
 
     .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(5, 100px);
     }
 
     .container {
@@ -387,7 +387,7 @@ body, header, main, nav, footer {
 /* Desktop adjustments */
 @media (min-width: 1024px) {
     .team-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(8, 100px);
     }
 
     .container {
