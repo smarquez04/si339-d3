@@ -49,6 +49,20 @@
                 <li><a href="mens_team\Santiago Valenzuela23821078.html"><img src="images/profiles/23821078.jpg" alt="Santiago Valenzuela racing" width="100"><span>Santiago Valenzuela</span></a></li>
                 <li><a href="mens_team\Kyle Krasan21245954.html"><img src="images/profiles/21245954.jpg" alt="Kyle Krasan racing at meet" width="100"><span>Kyle Krasan</span></a></li>
                 <li><a href="mens_team\Raphael Fournier23564875.html"><img src="images/profiles/23564875.jpg" alt="Raphael Fournier in the middle of the course" width="100"><span>Raphael Fournier</span></a></li>
+                <li><a href="mens_team\Alex Nemecek18820260.html"><img src="images/profiles/18820260.jpg" alt="Alex Nemecek running" width="100"><span>Alex Nemecek</span></a></li>
+                <li><a href="mens_team\Amir Abston25395576.html"><img src="images/profiles/25395576.jpg" alt="Amir Abston racing" width="100"><span>Amir Abston</span></a></li>
+                <li><a href="mens_team\Caspian Ruiz26460414.html"><img src="images/profiles/26460414.jpg" alt="Caspian Ruiz running" width="100"><span>Caspian Ruiz</span></a></li>
+                <li><a href="mens_team\Cole Harms26322018.html"><img src="images/profiles/26322018.jpg" alt="Cole Harms at race" width="100"><span>Cole Harms</span></a></li>
+                <li><a href="mens_team\Connor Jett24801564.html"><img src="images/profiles/24801564.jpg" alt="Connor Jett racing" width="100"><span>Connor Jett</span></a></li>
+                <li><a href="mens_team\Elliot Daley26322015.html"><img src="images/profiles/26322015.jpg" alt="Elliot Daley at race" width="100"><span>Elliot Daley</span></a></li>
+                <li><a href="mens_team\Emmett Strait26322025.html"><img src="images/profiles/26322025.jpg" alt="Emmett Strait running" width="100"><span>Emmett Strait</span></a></li>
+                <li><a href="mens_team\Evan Leach26322027.html"><img src="images/profiles/26322027.jpg" alt="Evan Leach finishing" width="100"><span>Evan Leach</span></a></li>
+                <li><a href="mens_team\Henry Strait22288700.html"><img src="images/profiles/22288700.jpg" alt="Henry Strait racing" width="100"><span>Henry Strait</span></a></li>
+                <li><a href="mens_team\Leo Chi26460401.html"><img src="images/profiles/26460401.jpg" alt="Leo Chi at meet" width="100"><span>Leo Chi</span></a></li>
+                <li><a href="mens_team\Rowan Kim24801855.html"><img src="images/profiles/24801855.jpg" alt="Rowan Kim running" width="100"><span>Rowan Kim</span></a></li>
+                <li><a href="mens_team\Sage O'Lor26322021.html"><img src="images/profiles/26322021.jpg" alt="Sage O'Lor at meet" width="100"><span>Sage O'Lor</span></a></li>
+                <li><a href="mens_team\William Johnson23564879.html"><img src="images/profiles/23564879.jpg" alt="William Johnson running" width="100"><span>William Johnson</span></a></li>
+
                  <!-- Additional athletes -->
 
         </section>
@@ -62,5 +76,17 @@
         <a href="https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
     </footer>
     <script src="https://kit.fontawesome.com/YOUR_ID.js" crossorigin="anonymous"></script>
+
+    <script>
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.onerror = function() {
+                img.src = './images/default_image.jpg';  // Correct path to default image
+                img.alt = "Default image";
+                img.onerror = null; // Prevent infinite loop if default image is also missing
+            };
+        });
+    </script>
+
 </body>
 </html>
