@@ -283,10 +283,6 @@ body, header, main, nav, footer {
     table th {
         background-color: #d4ecfb; /* Optional - contrasting background for table headers */
     }
-
-    table tr:nth-child(even) {
-        background-color: #333; /* Darken row backgrounds for contrast */
-    }
 }
 
 

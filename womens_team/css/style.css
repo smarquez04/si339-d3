@@ -271,7 +271,7 @@ body, header, main, nav, footer {
     }
     /* Dark Mode - Skip to Main Content button */
     a.skip-to-content {
-        background-color: #32586F;
+        background-color: #acdcf9;
         color: #f8f9fa; /* Light text for visibility */
     }
 
@@ -284,10 +284,8 @@ body, header, main, nav, footer {
         background-color: #d4ecfb; /* Optional - contrasting background for table headers */
     }
 
-    table tr:nth-child(even) {
-        background-color: #333; /* Darken row backgrounds for contrast */
-    }
 }
+
 
 
 @media (prefers-color-scheme: light) {
