@@ -9,7 +9,8 @@
 
       <link rel = "stylesheet" href = "css/reset.css">
       <link rel = "stylesheet" href = "css/style.css">
-      
+      <link href="dist/css/lightbox.css" rel="stylesheet" />
+
 
       <title>Ezekiel Paloff</title>
    </head>
@@ -25,8 +26,10 @@
    <header>
       <!--Athlete would input headshot-->
        <h1>Ezekiel Paloff</h1>
-      <img src="../images/profiles/23349707.jpg" alt="Athlete headshot" width="200"> 
-   </header>
+       <a href="../images/profiles/23349707.jpg" data-lightbox="athlete-photo">
+         <img src="../images/profiles/23349707.jpg" alt="Athlete headshot" width="200">
+     </a>
+
    <main id = "main">
       <section id= "athlete-sr-table">
          <h2>Athlete's Seasonal Records (SR) per Year</h2>
@@ -112,6 +115,8 @@
 
 
                      </footer>
+                     <script src="dist/js/lightbox-plus-jquery.js"></script>
+
                </body>
          </html>
    
