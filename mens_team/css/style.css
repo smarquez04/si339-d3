@@ -236,6 +236,7 @@ body, header, main, nav, footer {
     animation: fadeIn 1.5s ease-in;
 }
 
+
 /* Athlete Profile Picture Styling */
 #athlete-profile img {
     width: 100%;
@@ -268,7 +269,26 @@ body, header, main, nav, footer {
     nav, footer {
         background-color: #343a40;
     }
+    /* Dark Mode - Skip to Main Content button */
+    a.skip-to-content {
+        background-color: #32586F;
+        color: #f8f9fa; /* Light text for visibility */
+    }
+
+    /* Dark Mode - Table text color */
+    table, th, td {
+        color: black; /* Set table text to black for better contrast */
+    }
+
+    table th {
+        background-color: #d4ecfb; /* Optional - contrasting background for table headers */
+    }
+
+    table tr:nth-child(even) {
+        background-color: #333; /* Darken row backgrounds for contrast */
+    }
 }
+
 
 @media (prefers-color-scheme: light) {
     body {
